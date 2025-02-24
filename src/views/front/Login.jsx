@@ -4,11 +4,11 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate('/admin/list')
+        navigate('/admin/adminProduct')
     }
 
     return (<>
-        <h1>Login</h1>
+        <h1>登入</h1>
         <button type="button" onClick={handleLogin}>登入</button>
     </>)
 }

@@ -7,16 +7,16 @@ const FrontLayout = () => {
         {path: '/login', name: '登入'}
     ]
 
-    return (<>
-        <h1>FrontLayout</h1>
-        <ul style={{display: 'flex', gap: '10px', listStyle: 'none'}}>
+    return (<div style={{ textAlign: 'center', padding: '50px' }}>
+        <h1>前台</h1>
+        <ul style={{display: 'flex', justifyContent: 'center', gap: '10px', listStyle: 'none', padding: 0 }}>
             {routes.map(route => (
                 <li className="" key={route.path}><NavLink to={route.path}>{route.name}</NavLink></li>
             ))}
             
         </ul>
         <Outlet />
-    </>)
+    </div>)
 }
 
 export default FrontLayout;
