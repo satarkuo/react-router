@@ -6,15 +6,25 @@ const AdminLayout = () => {
         {path: '/admin/adminOrder', name: '訂單列表'},
         {path: '/', name: '返回首頁'}
     ]
-    return (<div style={{ textAlign: 'center', padding: '50px' }}>
-        <h1>後台</h1>
-        <ul style={{display: 'flex', justifyContent: 'center', gap: '10px', listStyle: 'none', padding: 0 }}>
-            {routes.map(route => (
-                <li className="" key={route.path}><NavLink to={route.path}>{route.name}</NavLink></li>
-            ))}
+    return (<div className="container-fluid  ">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary p-2 bg-primary-subtle ">
+            <div className="container">
+                <h1 className="">後台</h1>
+                <ul className="navbar-nav">
+                    {routes.map(route => (
+                        <li className="nav-item" key={route.path}>
+                            <NavLink to={route.path} className="nav-link">{route.name}</NavLink>
+                        </li>
+                    ))}
+                    
+                </ul>
+            </div>
             
-        </ul>
-        <Outlet />
+        </nav>
+        <section className="container py-5">
+            <Outlet />  
+        </section>
+        
     </div>)
 }
 

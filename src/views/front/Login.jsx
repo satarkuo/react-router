@@ -8,8 +8,15 @@ const Login = () => {
     }
 
     return (<>
-        <h1>登入</h1>
-        <button type="button" onClick={handleLogin}>登入</button>
+        <div className="container text-center">
+            <h3>登入</h3>
+            
+            <button type="button" 
+                className="btn btn-primary"
+                onClick={handleLogin}>
+                登入
+            </button>
+        </div>
     </>)
 }
 
